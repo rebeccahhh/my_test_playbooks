@@ -16,5 +16,5 @@
 
     - name: collect all facts
       setup:
-      gather_subset:
-         - '!all'
+        gather_subset:
+          - '!all'
