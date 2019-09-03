@@ -6,10 +6,15 @@
   hosts: all
   tasks:
 
-    - name: Get config for OS devices
-      os_facts:
-        gather_subset: all
+    - name: Get sytem version
+      shell: cat /etc/system-release
+      register: current_machine_name
 
     - name: Display the config
       debug:
-        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
+        msg: "This host is running {{ current_machine_name }}"
+
+    - name: collect all facts
+      setup:
+      gather_subset:
+         - '!all'
