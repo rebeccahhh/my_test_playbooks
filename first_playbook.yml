@@ -6,8 +6,8 @@
   hosts: all
   tasks:
 
-    - name: Get config for VyOS devices
-      vyos_facts:
+    - name: Get config for OS devices
+      os_facts:
         gather_subset: all
 
     - name: Display the config
