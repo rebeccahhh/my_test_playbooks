@@ -1,0 +1,5 @@
+---
+collection:
+- name: foo.bar
+  source: http://localhost:8002 
+
