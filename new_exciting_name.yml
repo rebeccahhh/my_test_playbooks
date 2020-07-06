@@ -1,6 +1,5 @@
 ---
-- name: Test Roles
-  host: localhost
+- host: localhost
   gather_facts: false
   roles: 
     - foo.bar.foobar
